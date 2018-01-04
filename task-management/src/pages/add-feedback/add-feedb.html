@@ -1,0 +1,72 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Add Feedback</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="cards-bg social-cards">
+
+
+  <ion-list>
+
+    <br><br><br>
+    <ion-item>
+      <ion-label stacked>Title</ion-label>
+      <ion-input type="text" [(ngModel)]="feed.title"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Status</ion-label>
+      <ion-select [(ngModel)]="feed.status">
+        <ion-option value="open">Open</ion-option>
+        <ion-option value="close">Close</ion-option>
+        <ion-option value="process">Process</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Hotel</ion-label>
+      <ion-select  [(ngModel)]="feed.hotel_id">
+        <ion-option *ngFor="let hotel of hotels" value="{{hotel.id}}">{{hotel.title}}</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Department</ion-label>
+      <ion-select [(ngModel)]="feed.department_id">
+        <ion-option *ngFor="let dept of departments" value="{{dept.id}}">{{dept.title}}</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Room</ion-label>
+      <ion-select [(ngModel)]="feed.room_id">
+        <ion-option *ngFor="let room of rooms" value="{{room.id}}">{{room.room_number}}</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Priority</ion-label>
+      <ion-select [(ngModel)]="feed.priority_id">
+        <ion-option value="1">High</ion-option>
+        <ion-option value="2">Medium</ion-option>
+        <ion-option value="3">Low</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Assignee</ion-label>
+      <ion-select multiple="true" [(ngModel)]="feed.assignee_id">
+        <ion-option value="27331293">27331293</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <button ion-button round (click)="addFeed()" style="width: 50%; align-content: center; height: 30px">Add</button>
+    </ion-item>
+
+
+  </ion-list>
+
+
+</ion-content>

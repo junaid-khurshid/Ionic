@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Feedback Detail</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="cards-bg social-cards">
+
+
+  <img src="http://www.lorempixel.com/100/100" style="width: 100%;">
+  <ion-row>
+    <ion-title>{{post.title}}</ion-title>
+  </ion-row>
+
+  <ion-item>
+    <ion-title>Status</ion-title>
+    <p class="desc">{{post.status}}</p>
+  </ion-item>
+
+  <ion-item>
+    <ion-title>Priority</ion-title>
+    <p class="desc">{{post.priority_id}}</p>
+  </ion-item>
+
+  <ion-item>
+    <ion-title>Created By</ion-title>
+    <p class="desc">{{post.created_by}}</p>
+  </ion-item>
+
+</ion-content>
+
+<style>
+  .desc{
+    margin-top: 10px;
+    margin-left: 15px;
+  }
+</style>

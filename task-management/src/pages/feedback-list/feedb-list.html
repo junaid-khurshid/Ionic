@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Feedbacks</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="cards-bg social-cards">
+  <hr>
+  <ion-card *ngFor="let post of posts" (click)="viewFeed(post)">
+
+    <ion-item>
+      <ion-avatar item-left>
+        <img src="http://www.lorempixel.com/100/100">
+      </ion-avatar>
+      <h2>{{post.title}}</h2>
+    </ion-item>
+
+
+    <ion-row>
+      <ion-col center text-right>
+        <ion-note>
+          {{post.created_at}}
+        </ion-note>
+      </ion-col>
+    </ion-row>
+
+  </ion-card>
+
+
+
+
+
+</ion-content>
+
+<style>
+  .social-cards ion-col {
+    padding: 0;
+  }
+</style>
+

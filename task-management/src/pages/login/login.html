@@ -1,0 +1,19 @@
+<ion-list>
+
+  <br><br><br>
+  <ion-item>
+    <ion-label stacked>Email</ion-label>
+    <ion-input type="email" [(ngModel)]="loginObj.email"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>Password</ion-label>
+    <ion-input type="password" [(ngModel)]="loginObj.password"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <button ion-button round (click)="loginUser()" style="width: 50%; align-content: center; height: 30px">Login</button>
+  </ion-item>
+
+
+</ion-list>
